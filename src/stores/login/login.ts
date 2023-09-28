@@ -28,7 +28,7 @@ export const loginStore = defineStore('login', () => {
   }
 
   // 用户菜单树
-  let userMenuTree = ref([])//这个是菜单数据
+  const userMenuTree = ref([])//这个是菜单数据
 
   // 获取用户信息
   const getUserInfo = async (data: any) => {

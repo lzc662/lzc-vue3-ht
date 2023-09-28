@@ -40,9 +40,7 @@ export function modifyNameThree(arr1: Array<any>, arr2: Array<any>, data: Array<
 export function convertData(data: any) {
   const res = []
   for (let i = 0; i < data.length; i++) {
-    console.log(data[i])
     const geoCoord = coordinateData[data[i].address]
-    console.log(coordinateData)
     if (geoCoord) {
       res.push({
         name: data[i].address,

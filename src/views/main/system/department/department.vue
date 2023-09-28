@@ -1,5 +1,5 @@
 <template>
-  <div class='dpartment'>
+  <div class='department'>
     dpartment 部门管理
   </div>
 </template>

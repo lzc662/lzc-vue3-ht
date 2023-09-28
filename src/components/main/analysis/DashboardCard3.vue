@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang='ts'>
-import { defineProps, onMounted, ref, getCurrentInstance, computed, reactive, watchEffect } from 'vue'
+import { defineProps, onMounted, ref, getCurrentInstance, computed, watchEffect } from 'vue'
 import echarts from '@/global/echartsInfo'
 import chinaJSON from '@/components/main/analysis/china.json'
 import type { EChartsCoreOption } from 'echarts'
@@ -28,7 +28,6 @@ const refContent = ref<InstanceType<typeof refContent>>()
 const { proxy }: any = getCurrentInstance()
 
 onMounted(() => {
-  let arr = []
   let chart: any = proxy.$echarts.init(refContent.value)
   const option = computed<EChartsCoreOption>(() => {
     return {
@@ -107,7 +106,7 @@ onMounted(() => {
   })
   echarts.registerMap('china', chinaJSON)
   chart.setOption(option.value)
-  watchEffect((n: any) => {
+  watchEffect(() => {
 
     chart.setOption(option.value)
   })

@@ -15,7 +15,7 @@
         mode='vertical'
         :collapse='!isLeftCollapse'
       >
-        <template v-for='(item) in userMenuTree'>
+        <template v-for='(item) in userMenuTree' :key='item.id'>
           <el-sub-menu
             class='el-sub-menu'
             :index='item.id + ""'
@@ -26,11 +26,10 @@
               </el-icon>
               <span>{{ item.name }}</span>
             </template>
-            <template v-for='(iten,indez) in item.children'>
+            <template v-for='(iten) in item.children' :key='iten.id'>
               <el-menu-item :index='item.id+""' @click='itemClick(iten)'>{{ iten.name }}</el-menu-item>
             </template>
           </el-sub-menu>
-
         </template>
 
       </el-menu>

@@ -2,7 +2,7 @@
   <div class='dashboard'>
     <!--  商品销量 card-->
     <el-row :gutter='20'>
-      <template v-for='item in goodList'>
+      <template v-for='item in goodList' :key='item.id'>
         <el-col :span='6'>
           <div class='card'>
             <card :cardData='item' :nub1='item.number1' :nub2='item.number2' />

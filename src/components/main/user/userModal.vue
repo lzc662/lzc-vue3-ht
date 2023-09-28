@@ -64,7 +64,6 @@ getRoleList()
 // 显示 隐藏 控制变量
 const centerDialogVisible = ref(false) //对话框
 const isNew = ref(true) //对话框中的密码选项
-let userId = 0
 
 // 表单数据
 const modalData = reactive({

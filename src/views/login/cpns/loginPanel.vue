@@ -89,8 +89,6 @@ import { ElMessage } from 'element-plus'
 import { locationCache } from '@/utils/cache'
 import { loginStore } from '@/stores/login/login'
 import { useRouter } from 'vue-router'
-import { storeToRefs } from 'pinia'
-
 // router实例
 const router = useRouter()
 

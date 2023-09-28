@@ -3,8 +3,7 @@
     <el-container class='el-container'>
       <!--      左侧栏-->
       <el-aside :width='isLeftCollapse === false ? "60px" :"210px" ' class='el-aside'>
-        <main-left />
-
+        <mainLeft />
       </el-aside>
 
       <el-container class='el-bottom'>

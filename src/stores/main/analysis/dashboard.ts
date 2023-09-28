@@ -11,13 +11,13 @@ import { reactive, ref } from 'vue'
 export const userDashboardStore = defineStore('dashboard', () => {
 
 
-  let goodList = reactive([])    // 商品统计数量
-  let goodsNumber = reactive([]) // 每个分类商品个数
-  let citySales = reactive([])   // 不同城市销量
-  let goodsNumberRose = reactive([]) // 每个分类商品个数
+  const goodList = reactive([])    // 商品统计数量
+  const goodsNumber = reactive([]) // 每个分类商品个数
+  const citySales = reactive([])   // 不同城市销量
+  const goodsNumberRose = reactive([]) // 每个分类商品个数
 
-  let goodsSales = reactive([])  // 分类商品销量
-  let goodsFavor = reactive([])  // 分类商品收藏
+  const goodsSales = reactive([])  // 分类商品销量
+  const goodsFavor = reactive([])  // 分类商品收藏
 
 
   // 获取商品统计数量
@@ -32,7 +32,7 @@ export const userDashboardStore = defineStore('dashboard', () => {
     const res3 = await fetchcitySales()  //不同城市销量
     const res4 = await fetchClassificationGoodsSales()  // 分类商品销量
     const res5 = await fetchClassificationGoodsFavor() // 分类商品收藏
-    console.log('res3', res3.data)
+    // console.log('res3', res3.data)
 
 
     //清空数组

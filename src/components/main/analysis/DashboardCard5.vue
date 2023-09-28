@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang='ts'>
-import { defineProps, onMounted, ref, getCurrentInstance, computed, reactive, watchEffect } from 'vue'
+import { defineProps, onMounted, ref, getCurrentInstance, computed, watchEffect } from 'vue'
 import type { EChartsCoreOption } from 'echarts'
 import { modifyNameTwo } from '@/utils/modifyDataName'
 

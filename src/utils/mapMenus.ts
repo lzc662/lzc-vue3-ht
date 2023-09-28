@@ -21,7 +21,7 @@ function localRoute() {
 
 // 声明首个路由
 export let firstMenu: any = null
-export let firstMenuId: any = ref()
+export const firstMenuId: any = ref()
 
 
 // 根据服务器返回的路由匹配本地路由
@@ -51,7 +51,7 @@ export function mapMenusToRouter(userMenuTree: any) {
 // 面包屑
 // 声明路由对象
 export function breadcrumbs(leftPath: string) {
-  let mbx = {
+  const mbx = {
     title: '',
     titleUrl: '',
     name: ''

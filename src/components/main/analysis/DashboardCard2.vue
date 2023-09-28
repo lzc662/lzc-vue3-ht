@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang='ts'>
-import { defineProps, onMounted, ref, getCurrentInstance, computed, reactive, watchEffect } from 'vue'
+import { defineProps, onMounted, ref, getCurrentInstance, computed, watchEffect } from 'vue'
 import type { EChartsCoreOption } from 'echarts'
 
 interface Iprops {
@@ -65,12 +65,11 @@ onMounted(() => {
     }
   })
   chart.setOption(option.value)
-  watchEffect((n: any) => {
+  watchEffect(() => {
     arr.splice(0, arr.length)
     for (const item in props?.cardData) {
-      props.cardData[item].value = props.cardData[item].goodsCount
       if (props.cardData[item].value != 0) {
-        const obj = { value: props.cardData[item].value, name: props.cardData[item].name }
+        const obj = { value: props.cardData[item].goodsCount, name: props.cardData[item].name }
         arr.push(obj)
       }
     }

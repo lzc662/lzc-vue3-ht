@@ -48,8 +48,7 @@ onMounted(() => {
 })
 const props = defineProps({
   cardData: {
-    type: Object,
-    default: {}
+    type: Object
   },
   nub1: {
     type: Number,
