@@ -1,0 +1,32 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.maxW {
+    width: 100%;
+}
+
+.halfW {
+    width: 50% !important;
+}
+
+.df {
+    display: flex;
+    justify-content: space-between;
+}
+
+.el-menu {
+    border: none !important;
+}
+
+:root {
+
+}
+
+/*.el-menu-vertical-demo {*/
+/*    width: 10%;*/
+/*}*/
