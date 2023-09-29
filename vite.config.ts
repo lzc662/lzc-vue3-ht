@@ -10,6 +10,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  //取消了语法检查
   lintOnSave: false,
   plugins: [
     vue(),
